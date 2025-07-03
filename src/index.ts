@@ -17,7 +17,11 @@ app.use("/api/v1", UserRouter);
 app.use("/api/v1", AppointmentsRouter);
 app.use("/api/v1", NotificationsRouter);
 app.use("/api/v1", CommentsRouter);
+app.use("/",(req,res)=>{
 
+    res.send("HIT");
+    
+});
 app.listen(PORT, () => {
     console.log("Server started listening at:", PORT);
 });
